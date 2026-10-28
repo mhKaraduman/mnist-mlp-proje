@@ -19,7 +19,6 @@ transform = transforms.Compose([
 full_train_dataset = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
 test_dataset = datasets.MNIST(root='./data', train=False, download=True, transform=transform)
 
-# %80 Train, %20 Validation ayrımı
 train_size = int(0.8 * len(full_train_dataset))
 val_size = len(full_train_dataset) - train_size
 train_dataset, val_dataset = random_split(full_train_dataset, [train_size, val_size])

@@ -24,7 +24,7 @@ class BasicMLP(nn.Module):
         return x
 
 def center_by_mass(img_28x28):
-    """MNIST standardı: Rakamı piksellerin kütle merkezine göre tam ortaya (14,14) hizalar."""
+    """MNIST standardı: Rakamı piksellerin kütle merkezine göre tam ortaya (14,14) hiza"""
     moments = cv2.moments(img_28x28)
     if moments["m00"] == 0:
         return img_28x28
